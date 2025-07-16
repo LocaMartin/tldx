@@ -1,5 +1,5 @@
 <div align="center">
-<img src="logo.png" style="width: 300px; hight: 300px;"/>
+<img src="logo.png" style="width: 200px; hight: 200px;"/>
 <h2>TLDX</h2>
 <p>Top Level Domain(TLD) Expansion Tool for Bug Bounty</p>
 </div>
@@ -39,15 +39,15 @@ tldx -k dev -v
 
 ```yaml
 # Generate government domains
-tldx -k gov | head -5
-gov.aaa
-gov.aarp
-gov.abb
-gov.abbott
-gov.abbvie
+tldx -k google | head -5
+google.aaa
+google.aarp
+google.abb
+google.abbott
+google.abbvie
 
 # Pipe to DNS resolver
-tldx -k api | dnsx -silent
+tldx -k "api.google" | dnsx -silent
 
 # Full recon workflow
 tldx -kf keywords.txt | httpx -silent | nuclei -t vulnerabilities/
