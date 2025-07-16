@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="tldx",
-    version="1.0.0",
+    version="1.0.1",
     author="Loca Martin",
     author_email="locaboyff@gmail.com",
     description="TLD Expansion Tool for Bug Bounty Reconnaissance",
