@@ -5,7 +5,6 @@
     x="20"
     y="35"
     fill="red"
-    font-family="monospace"
     font-size="18"
     xml:space="preserve">
 <tspan x="20" dy="0"> _      _       _          </tspan>
