@@ -17,7 +17,7 @@
   </text>
 </svg> -->
 <div align="center">
-<h2>TLDX</h2>
+<h1>TLDX</h1>
 <p>Top Level Domain(TLD) Expansion Tool for Bug Bounty</p>
 </div>
 
