@@ -41,3 +41,28 @@ def generate_combinations(keywords, tlds):
     for keyword in keywords:
         for tld in tlds:
             yield f"{keyword}.{tld}"
+
+def load_tlds(tld_file=None):
+    """Load TLDs without exiting on fetch or file errors."""
+    try:
+        return fetch_tlds(tld_file)
+    except SystemExit:
+        return []
+
+def expand_keyword(keyword, tld_list=None):
+    """Expand a single keyword across available TLDs."""
+    if not keyword:
+        return []
+
+    tlds = load_tlds(tld_list)
+    return list(generate_combinations([keyword.strip().lower()], tlds))
+
+def expand_keywords_from_file(keyword_file, tld_list=None):
+    """Expand keywords from a file across available TLDs."""
+    try:
+        keywords = load_keywords(keyword_file=keyword_file)
+    except SystemExit:
+        return []
+
+    tlds = load_tlds(tld_list)
+    return list(generate_combinations(keywords, tlds))

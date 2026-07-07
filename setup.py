@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="tldx",
-    version="1.0.1",
+    version="1.0.2",
     author="Loca Martin",
     author_email="locaboyff@gmail.com",
     description="TLD Expansion Tool for Bug Bounty Reconnaissance",
@@ -14,8 +14,7 @@ setup(
     url="https://github.com/LocaMartin/tldx",
     packages=find_packages(),
     install_requires=[
-        "requests>=2.25.1",
-        "argparse>=1.4.0"
+        "requests>=2.25.1"
     ],
     entry_points={
         "console_scripts": [
